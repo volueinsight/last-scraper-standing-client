@@ -3,6 +3,7 @@ from io import StringIO
 from time import sleep
 GAME_URL =  'http://localhost:8000/api'
 TEAM_TOKEN = 'rbk'
+SLEEP_TIME = 10
 
 class BaseLoader:
     """This is the base scraper class. It is not very useable on its own
@@ -36,7 +37,7 @@ class BaseLoader:
         return response.text == 'Correct!'
 
     def parse_data(self, data):
-        raise NotImplementedError("Needs to be implemented and called on a child class")
+        raise NotImplementedError('Needs to be implemented and called on a child class')
 
     def run(self):
         correct = True
@@ -49,6 +50,6 @@ class BaseLoader:
             print(f'Calculated result:{result}')
             correct = self.send_result(result)
             if correct:
-                print("Correct result! Trying again in 10 seconds")
-                sleep(5)
-        print("Loader broke due to incorrectness in the data. Restart the script when you want to try again. \nGood luck!")
+                print(f'Correct result! Trying again in {SLEEP_TIME} seconds')
+                sleep(SLEEP_TIME)
+        print('Loader broke due to incorrectness in the data. Restart the script when you want to try again. \nGood luck!')

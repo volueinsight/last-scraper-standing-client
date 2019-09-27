@@ -14,8 +14,8 @@ class BaseLoader:
 
     def __init__(self, name):
         self.name = name
-        self.data_endpoint = f'{GAME_URL}/datasource/{self.name}/data'
-        self.desc_endpoint = f'{GAME_URL}/datasource/{self.name}/current?format=json'
+        self.data_endpoint = f'{GAME_URL}/api/datasource/{self.name}/data'
+        self.desc_endpoint = f'{GAME_URL}/api/datasource/{self.name}/current?format=json'
         print(f'Data is available here: {self.data_endpoint}')
 
     def get_description(self):

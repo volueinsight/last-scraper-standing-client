@@ -1,0 +1,11 @@
+requests
+
+# Oh you are a nosy one aren't you! I like you!
+# Here is a small bonus tip
+# It may be wise to use the libraries below for handling your data more efficiently
+# But we've not included them from the start since that would almost be considered cheating
+# And it is up to you to figure out how they can help you write a robust scraper.
+# Good luck!
+
+# pandas
+# numpy

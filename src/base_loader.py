@@ -1,8 +1,8 @@
 import requests
 from io import StringIO
 from time import sleep
-GAME_URL =  'http://localhost:8000/api'
-TEAM_TOKEN = 'rbk'
+GAME_URL =  'https://play.edu.wattsight.com'
+TEAM_TOKEN = 'YOUR_TEAM_ACCESS_TOKEN'
 SLEEP_TIME = 10
 
 class BaseLoader:

@@ -1,7 +1,7 @@
 import requests
 from io import StringIO
 from time import sleep
-GAME_URL =  'https://play.edu.wattsight.com'
+GAME_URL =  'https://lss-game.wattsight.com'
 TEAM_TOKEN = 'YOUR_TEAM_ACCESS_TOKEN'
 SLEEP_TIME = 10
 

@@ -1,8 +1,8 @@
 import requests
 from io import StringIO
 from time import sleep
-GAME_URL =  'http://localhost:8000/api'
-TEAM_TOKEN = 'rbk'
+GAME_URL =  'https://lss-game.wattsight.com'
+TEAM_TOKEN = 'YOUR_TEAM_ACCESS_TOKEN'
 SLEEP_TIME = 10
 
 class BaseLoader:
@@ -14,8 +14,8 @@ class BaseLoader:
 
     def __init__(self, name):
         self.name = name
-        self.data_endpoint = f'{GAME_URL}/datasource/{self.name}/data'
-        self.desc_endpoint = f'{GAME_URL}/datasource/{self.name}/current?format=json'
+        self.data_endpoint = f'{GAME_URL}/api/datasource/{self.name}/data'
+        self.desc_endpoint = f'{GAME_URL}/api/datasource/{self.name}/current?format=json'
         print(f'Data is available here: {self.data_endpoint}')
 
     def get_description(self):

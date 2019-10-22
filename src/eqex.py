@@ -9,7 +9,7 @@ class Eqex(BaseLoader):
         for row in reader:
             if 'close' in row[3]:
                 continue
-            max_close = min(min_close, float(row[3]))
-        return max_close
-        
+            min_close = min(min_close, float(row[3]))
+        return min_close
+
 Eqex('eqex').run()

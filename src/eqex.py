@@ -10,7 +10,6 @@ class Eqex(BaseLoader):
             if 'close' in row[3]:
                 continue
             max_close = min(min_close, float(row[3]))
-        print(max_close)
         return max_close
         
 Eqex('eqex').run()

@@ -16,6 +16,8 @@ class BaseLoader:
         self.name = name
         self.data_endpoint = f'{GAME_URL}/api/datasource/{self.name}/data'
         self.desc_endpoint = f'{GAME_URL}/api/datasource/{self.name}/current?format=json'
+        self.history_endpoint = f'{GAME_URL}/api/datasource/{self.name}/history'
+        
         self.print_data_link()
 
     def get_description(self):
@@ -63,4 +65,5 @@ class BaseLoader:
     def print_data_link(self):
         print('*' * (len(self.data_endpoint)+4))
         print(f'  Current data is available here:\n  {self.data_endpoint}')
+        print(f'  Historic descriptions are available here: {self.history_endpoint}')
         print('*' * (len(self.data_endpoint)+4))

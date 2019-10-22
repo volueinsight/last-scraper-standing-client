@@ -6,7 +6,7 @@ class Orkan(BaseLoader):
 
     def parse_data(self, data):
         reader = csv.reader(data, delimiter=',')
-        result = 0
+        result = 10**6
         for row in reader:
             if row[-1] != 'hurricane':
                 continue

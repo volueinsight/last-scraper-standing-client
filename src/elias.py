@@ -9,7 +9,7 @@ class Elias(BaseLoader):
         rows = 0
         for row in reader:
             try:
-                diff = float(row[0]-row[1])
+                diff = int(row[0]) - int(row[1])
                 rows += 1
             except ValueError:
                 pass
